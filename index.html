@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INTENSE - IT Outsourcing Solutions</title>
+    <title>INTENSE - IT Outsourcing для современного бизнеса</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Background Elements -->
+    <div class="bg-blur blur-1"></div>
+    <div class="bg-blur blur-2"></div>
+    <div class="bg-blur blur-3"></div>
+    <canvas id="particles"></canvas>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">INTENSE</div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#team" class="nav-link">Team</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#services" class="nav-link">Услуги</a></li>
+                <li><a href="#about" class="nav-link">О нас</a></li>
+                <li><a href="#portfolio" class="nav-link">Проекты</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
             </ul>
+            <button class="btn-primary">Консультация</button>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -30,109 +36,70 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="stars"></div>
+    <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Your IT Dreams,<br><span class="gradient-text">Our Expertise</span></h1>
-            <p class="hero-subtitle">Premium IT outsourcing solutions tailored for your business needs</p>
-            <button class="btn btn-primary">Get Started</button>
-        </div>
-        <div class="hero-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
+            <div class="hero-text fade-in-up">
+                <h1 class="hero-title">IT-аутсорсинг<br>для современного<br>бизнеса</h1>
+                <div class="hero-checklist">
+                    <div class="check-item">✔ Серверы</div>
+                    <div class="check-item">✔ Видеонаблюдение</div>
+                    <div class="check-item">✔ Облачные решения</div>
+                    <div class="check-item">✔ Системное администрирование</div>
+                </div>
+                <button class="btn-primary large">Получить консультацию</button>
+            </div>
+            <div class="hero-3d">
+                <canvas id="canvas-3d"></canvas>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive solutions for modern businesses</p>
+            <h2 class="section-title fade-in">Технологии,<br>на которых<br>держится бизнес</h2>
             
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="card-icon">💻</div>
-                    <h3>Web Development</h3>
-                    <p>Custom web applications built with cutting-edge technologies and best practices</p>
-                    <a href="#" class="card-link">Learn more →</a>
+                <div class="service-card glass fade-in">
+                    <div class="service-icon">🖥</div>
+                    <h3>Системное администрирование</h3>
+                    <p>Полное управление вашей IT-инфраструктурой, обновления, патчи, мониторинг 24/7</p>
+                    <a href="#" class="card-link">Подробнее →</a>
                 </div>
 
-                <div class="service-card">
-                    <div class="card-icon">📱</div>
-                    <h3>Mobile Apps</h3>
-                    <p>Native and cross-platform mobile solutions for iOS and Android</p>
-                    <a href="#" class="card-link">Learn more →</a>
+                <div class="service-card glass fade-in">
+                    <div class="service-icon">☁️</div>
+                    <h3>Облачные решения</h3>
+                    <p>Безопасное хранилище данных, масштабируемость, доступ из любой точки мира</p>
+                    <a href="#" class="card-link">Подробнее →</a>
                 </div>
 
-                <div class="service-card">
-                    <div class="card-icon">☁️</div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Scalable cloud infrastructure and migration services</p>
-                    <a href="#" class="card-link">Learn more →</a>
+                <div class="service-card glass fade-in">
+                    <div class="service-icon">🔒</div>
+                    <h3>Кибербезопасность</h3>
+                    <p>Защита от взломов, антивирусные системы, резервное копирование данных</p>
+                    <a href="#" class="card-link">Подробнее →</a>
                 </div>
 
-                <div class="service-card">
-                    <div class="card-icon">🔒</div>
-                    <h3>Cybersecurity</h3>
-                    <p>Enterprise-grade security solutions to protect your digital assets</p>
-                    <a href="#" class="card-link">Learn more →</a>
+                <div class="service-card glass fade-in">
+                    <div class="service-icon">📹</div>
+                    <h3>Видеонаблюдение</h3>
+                    <p>Профессиональные системы видеонаблюдения с облачным хранением архива</p>
+                    <a href="#" class="card-link">Подробнее →</a>
                 </div>
 
-                <div class="service-card">
-                    <div class="card-icon">📊</div>
-                    <h3>Data Analytics</h3>
-                    <p>Transform raw data into actionable insights for your business</p>
-                    <a href="#" class="card-link">Learn more →</a>
+                <div class="service-card glass fade-in">
+                    <div class="service-icon">🌐</div>
+                    <h3>Сетевые решения</h3>
+                    <p>Настройка и оптимизация сетевой инфраструктуры для максимальной производительности</p>
+                    <a href="#" class="card-link">Подробнее →</a>
                 </div>
 
-                <div class="service-card">
-                    <div class="card-icon">🤖</div>
-                    <h3>AI & ML</h3>
-                    <p>Intelligent solutions powered by artificial intelligence</p>
-                    <a href="#" class="card-link">Learn more →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="section-title">Recent Projects</h2>
-            <p class="section-subtitle">Showcase of our latest works</p>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c0 100%);"></div>
-                    <div class="portfolio-info">
-                        <h3>E-Commerce Platform</h3>
-                        <p>React, Node.js, MongoDB</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #e8d4c0 0%, #dcc2ad 100%);"></div>
-                    <div class="portfolio-info">
-                        <h3>Mobile Banking App</h3>
-                        <p>Flutter, Firebase</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #dcc2ad 0%, #cfa98a 100%);"></div>
-                    <div class="portfolio-info">
-                        <h3>AI Analytics Dashboard</h3>
-                        <p>Python, TensorFlow, Vue.js</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, #cfa98a 0%, #c29577 100%);"></div>
-                    <div class="portfolio-info">
-                        <h3>Cloud Infrastructure</h3>
-                        <p>AWS, Kubernetes, DevOps</p>
-                    </div>
+                <div class="service-card glass fade-in">
+                    <div class="service-icon">📊</div>
+                    <h3>IT консалтинг</h3>
+                    <p>Стратегическое планирование, оптимизация затрат, цифровая трансформация</p>
+                    <a href="#" class="card-link">Подробнее →</a>
                 </div>
             </div>
         </div>
@@ -141,102 +108,80 @@
     <!-- Stats Section -->
     <section class="stats">
         <div class="container">
-            <div class="stat-item">
-                <div class="stat-number" data-target="150">0</div>
-                <div class="stat-label">Projects Completed</div>
+            <div class="stat-card glass fade-in">
+                <div class="stat-number" data-target="120">0</div>
+                <div class="stat-label">компаний</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="50">0</div>
-                <div class="stat-label">Team Members</div>
+            <div class="stat-card glass fade-in">
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-label">лет опыта</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="98">0</div>
-                <div class="stat-label">Client Satisfaction</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="8">0</div>
-                <div class="stat-label">Years Experience</div>
+            <div class="stat-card glass fade-in">
+                <div class="stat-number">99.9<span>%</span></div>
+                <div class="stat-label">доступность</div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="team">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Our Team</h2>
-            <p class="section-subtitle">Meet the talented people behind INTENSE</p>
+            <h2 class="section-title fade-in">О компании INTENSE</h2>
+            <p class="section-subtitle fade-in">Мы создаем надежную IT-инфраструктуру для развития вашего бизнеса</p>
             
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-avatar"></div>
-                    <h3>Alex Johnson</h3>
-                    <p class="member-role">CEO & Lead Developer</p>
-                    <p class="member-bio">10+ years in software development</p>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>INTENSE — это команда высокопрофессиональных IT-специалистов с опытом работы более 15 лет. Мы помогаем компаниям любого размера создавать, управлять и оптимизировать свою информационную инфраструктуру.</p>
+                    <p>Наш подход — это сочетание передовых технологий, проактивного мониторинга и круглосуточной поддержки. Мы не просто решаем проблемы, мы предотвращаем их.</p>
                 </div>
-
-                <div class="team-member">
-                    <div class="member-avatar"></div>
-                    <h3>Maria Garcia</h3>
-                    <p class="member-role">Design Director</p>
-                    <p class="member-bio">Expert in UI/UX design</p>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-avatar"></div>
-                    <h3>David Chen</h3>
-                    <p class="member-role">DevOps Lead</p>
-                    <p class="member-bio">Cloud infrastructure specialist</p>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-avatar"></div>
-                    <h3>Sarah Smith</h3>
-                    <p class="member-role">Project Manager</p>
-                    <p class="member-bio">Agile methodology expert</p>
+                <div class="about-image fade-in">
+                    <div class="glass-box">
+                        <div class="about-icon">🚀</div>
+                        <p>Современные технологии</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
+            <h2 class="section-title fade-in">Наши проекты</h2>
             
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"INTENSE delivered exceptional results. Highly professional and responsive team."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div>
-                            <h4>John Doe</h4>
-                            <p>CEO, Tech Corp</p>
-                        </div>
-                    </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item glass fade-in">
+                    <div class="portfolio-tag">Облако</div>
+                    <h3>Миграция на облако</h3>
+                    <p>Перенос инфраструктуры компании на AWS с сохранением всех данных и минимальным простоем</p>
                 </div>
 
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Perfect execution from start to finish. They understood our vision perfectly."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div>
-                            <h4>Emma Wilson</h4>
-                            <p>Founder, StartUp Co</p>
-                        </div>
-                    </div>
+                <div class="portfolio-item glass fade-in">
+                    <div class="portfolio-tag">Безопасность</div>
+                    <h3>Система видеонаблюдения</h3>
+                    <p>Установка сети видеокамер с облачным хранилищем и интеллектуальным анализом</p>
                 </div>
 
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Great communication and technical excellence. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div>
-                            <h4>Michael Brown</h4>
-                            <p>Director, Enterprise Inc</p>
-                        </div>
+                <div class="portfolio-item glass fade-in">
+                    <div class="portfolio-tag">IT</div>
+                    <h3>IT-инфраструктура</h3>
+                    <p>Проектирование и внедрение полной IT-системы для производственного комплекса</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="glass-card map-card fade-in">
+                <div class="map-content">
+                    <h3>📍 INTENSE</h3>
+                    <p><strong>Алматы, Казахстан</strong></p>
+                    <p>Работаем по всему Казахстану и СНГ</p>
+                    <div class="map-contacts">
+                        <p>📧 info@intense.kz</p>
+                        <p>📞 +7 (777) 123-45-67</p>
                     </div>
                 </div>
             </div>
@@ -246,50 +191,23 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Let's Work Together</h2>
-            <p class="section-subtitle">Get in touch with our team today</p>
+            <h2 class="section-title fade-in">Свяжитесь с нами</h2>
             
-            <div class="contact-wrapper">
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">📍</div>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Almaty, Kazakhstan</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>hello@intense.kz</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">📞</div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+7 (700) 123-45-67</p>
-                        </div>
-                    </div>
+            <form class="contact-form glass fade-in">
+                <div class="form-group">
+                    <input type="text" placeholder="Ваше имя" required>
                 </div>
-            </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Ваш email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Ваш телефон" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Опишите вашу задачу" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary large">Отправить запрос</button>
+            </form>
         </div>
     </section>
 
@@ -299,33 +217,32 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>INTENSE</h3>
-                    <p>Your trusted IT outsourcing partner</p>
+                    <p>IT-аутсорсинг для современного бизнеса</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4>Быстрые ссылки</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#portfolio">Проекты</a></li>
+                        <li><a href="#contact">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">Instagram</a>
-                    </div>
+                    <h4>Контакты</h4>
+                    <p>📧 info@intense.kz</p>
+                    <p>📞 +7 (777) 123-45-67</p>
+                    <p>📍 Алматы, Казахстан</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 INTENSE. All rights reserved.</p>
+                <p>&copy; 2024 INTENSE. Все права защищены.</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/particles.js"></script>
+    <script src="js/three-d.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
